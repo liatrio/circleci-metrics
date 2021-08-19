@@ -1,0 +1,12 @@
+version: 2.1
+description: |
+  Try and gather metrics from previous pipeline.
+
+orbs:
+  custom-orb: liatrio-poc/circleci-orb-poc@dev:jeff-playground
+  
+workflows:
+  metrics:
+    jobs:
+      - custom-orb/run-metrics:
+          executor: custom-orb/default
